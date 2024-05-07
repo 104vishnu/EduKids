@@ -1,0 +1,58 @@
+// Home.scss
+
+.main {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+
+  .feature {
+    flex: 1 1 auto; // Allow shrinking but not growing
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    max-width: 300px; // Set maximum width for the feature container
+    height: 50vh;
+
+    img {
+      width: 100%; // Make the image responsive within its container
+      height: 80%;
+      border-radius: 5px;
+      
+    }
+
+    h3 {
+      margin-top: 0px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #555;
+    }
+  }
+}

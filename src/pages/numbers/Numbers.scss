@@ -1,0 +1,81 @@
+// Numbers.scss
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Ensure no overflow content */
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .number-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1; /* Fill remaining space */
+      overflow: hidden; /* Ensure no overflow content */
+  
+      .number-card {
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+  
+        img {
+          width: 100%; /* Make the image fill the width of the container */
+          height: 100%; /* Make the image fill the height of the container */
+          object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
+        }
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+  
+      .navigation-buttons {
+        display: flex;
+        justify-content: space-between; /* Spacing buttons to the left and right */
+        width: 100%; /* Make the button container fill the width */
+        margin-top: 20px;
+      }
+  
+      button {
+        background-color: green;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+  
+      .previous-button {
+        background-color: #28a745; /* Green background color */
+        &:hover {
+          background-color: #218838; /* Darker green on hover */
+        }
+      }
+  
+      .next-button {
+        background-color: #28a745; /* Green background color */
+        &:hover {
+          background-color: #218838; /* Darker green on hover */
+        }
+      }
+    }
+  
+    .footer {
+      margin-top: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+  }
+  

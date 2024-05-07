@@ -1,0 +1,68 @@
+// // LearnNumbers.scss
+// .learn-numbers {
+//     text-align: center;
+  
+//     h2 {
+//       margin-bottom: 20px;
+//     }
+  
+//     .numbers-grid {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       gap: 20px;
+  
+//       .number-card {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//       }
+  
+//       .number-image {
+//         width: 150px;
+//         height: auto;
+//         cursor: pointer;
+//         transition: transform 0.2s;
+  
+//         &:hover {
+//           transform: scale(1.1);
+//         }
+//       }
+  
+//       .audio-control {
+//         margin-top: 5px;
+//       }
+//     }
+//   }
+
+/* LearnNumbers.scss */
+.learn-numbers {
+    text-align: center;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    .numbers-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+  
+      .number-card {
+        cursor: pointer;
+        transition: transform 0.2s;
+        width: 20%; /* Each card takes up 20% of the container's width */
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+  
+      .number-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  

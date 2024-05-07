@@ -1,0 +1,44 @@
+// Telugu.scss
+
+.telugu {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .telugu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .telugu-digit {
+      cursor: pointer;
+      transition: transform 0.2s;
+      width: calc(20% - 20px); // Adjust width as needed for 5 digits in a row with 20px gap
+      height: 80px; // Adjust height as needed
+      border: 2px solid black;
+      margin: 10px;
+      text-align: center;
+      line-height: 80px;
+      font-size: 70px;
+      background-color: #c3e6e6; // Light background color
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Light shadow effect
+
+      // Hover effect
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      // Media queries for responsiveness
+      @media (max-width: 768px) {
+        width: calc(33.33% - 20px); // Adjust width for 3 digits in a row on smaller devices with 20px gap
+      }
+
+      @media (max-width: 480px) {
+        width: calc(50% - 20px); // Adjust width for 2 digits in a row on even smaller devices with 20px gap
+      }
+    }
+  }
+}
