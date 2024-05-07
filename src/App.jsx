@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Layout from "./components/layout/Layout.jsx";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home.jsx";
 import Login from "./pages/login/Login.jsx";
