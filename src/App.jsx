@@ -51,16 +51,6 @@ function App() {
         </ProtectedRoutes>)
         },
         {
-          path: "/card",
-          element: (
-            <ProtectedRoutes>
-              <CardView />
-            </ProtectedRoutes>
-          ),
-        },
-
-
-        {
           path: "/courses",
           element: (
             <ProtectedRoutes>
