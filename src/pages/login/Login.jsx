@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+
 import newRequest from '../../utils/newRequest.js';
+import "./Login.scss"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -53,7 +55,9 @@ function Login() {
 
           <button type="submit">LOGIN</button>
         </form>
-        <p> Not a member? <span>Register Now</span> </p>
+        <p> Not a member? 
+        <Link to="/register"> <span>Register Now</span></Link>
+          </p>
       </div>
     </div>
   );
