@@ -1,9 +1,111 @@
+// .count-numbers {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+
+//   background: #F3D7CE;
+
+//   .question {
+//     margin-bottom: 20px;
+
+//     img {
+//       margin-top: 40px;
+//       width: 55vw;
+//       height: 60vh;
+//       border: 1px solid transparent; /* Add a transparent border to reserve space for the shadow */
+//       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+//     }
+//   }
+
+//   .options {
+//     margin-top: 10px;
+//     display: flex;
+//     justify-content: center;
+//     gap: 70px; // Add some gap between option groups
+
+//     .first,
+//     .second {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 10px; // Add some gap between options
+//     }
+
+//     .option1,
+//     .option2,
+//     .option3,
+//     .option4 {
+//       button {
+//         width: 100px;
+//         height: 50px;
+//         border: none;
+//         background-color: lightpink; // Set default background color
+//         color: #000;
+//         font-size: 16px;
+//         font-weight: bold;
+//         cursor: pointer;
+//         transition: background-color 0.3s ease; // Smooth transition for background color change
+//         margin-bottom: 10px; // Add margin below each button
+
+//         &:disabled {
+//           cursor: not-allowed;
+//         }
+
+//         &.correct {
+//           background-color: green; // Set background color for correct option
+//         }
+
+//         &.wrong {
+//           background-color: tomato; // Set background color for wrong option
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .modal {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background-color: rgba(230, 69, 11, 0.5);
+
+//   .modal-content {
+//     background-color: #fff;
+//     padding: 20px;
+//     border-radius: 10px;
+//     text-align: center;
+
+//     p {
+//       margin-bottom: 10px;
+//     }
+
+//     .options {
+//       display: flex;
+//       justify-content: center;
+//       gap: 20px;
+
+//       .link-button {
+//         padding: 10px 20px;
+//         text-decoration: none;
+//         background-color: rgb(25, 171, 220);
+//         color: #000;
+//         border: none;
+//         border-radius: 5px;
+//         cursor: pointer;
+//         transition: background-color 0.3s ease;
+
+//         &:hover {
+//           background-color: #8ed8fc;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .count-numbers {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5px;
   background: #F3D7CE;
 
   .question {
@@ -22,13 +124,13 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 70px; // Add some gap between option groups
+    gap: 70px; /* Add some gap between option groups */
 
     .first,
     .second {
       display: flex;
       flex-direction: column;
-      gap: 10px; // Add some gap between options
+      gap: 10px; /* Add some gap between options */
     }
 
     .option1,
@@ -39,24 +141,24 @@
         width: 100px;
         height: 50px;
         border: none;
-        background-color: lightpink; // Set default background color
+        background-color: lightpink; /* Set default background color */
         color: #000;
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
-        transition: background-color 0.3s ease; // Smooth transition for background color change
-        margin-bottom: 10px; // Add margin below each button
+        transition: background-color 0.3s ease; /* Smooth transition for background color change */
+        margin-bottom: 10px; /* Add margin below each button */
 
         &:disabled {
           cursor: not-allowed;
         }
 
         &.correct {
-          background-color: green; // Set background color for correct option
+          background-color: green; /* Set background color for correct option */
         }
 
         &.wrong {
-          background-color: tomato; // Set background color for wrong option
+          background-color: tomato; /* Set background color for wrong option */
         }
       }
     }
@@ -99,6 +201,48 @@
           background-color: #8ed8fc;
         }
       }
+    }
+  }
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .count-numbers .question img {
+    margin-top: 20px;
+    width: 80vw; /* Adjusted width for smaller screens */
+    height: 45vh; /* Adjusted height for smaller screens */
+  }
+
+  .count-numbers .options {
+    gap: 50px; /* Adjusted gap between option groups for smaller screens */
+
+    .option1 button,
+    .option2 button,
+    .option3 button,
+    .option4 button {
+      width: 90px; /* Adjusted width for smaller screens */
+      height: 40px; /* Adjusted height for smaller screens */
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .count-numbers .question img {
+    margin-top: 10px;
+    width: 90vw; /* Adjusted width for smaller screens */
+    height: 35vh; /* Adjusted height for smaller screens */
+  }
+
+  .count-numbers .options {
+    gap: 30px; /* Further adjusted gap between option groups for smaller screens */
+
+    .option1 button,
+    .option2 button,
+    .option3 button,
+    .option4 button {
+      width: 80px; /* Further adjusted width for smaller screens */
+      height: 35px; /* Further adjusted height for smaller screens */
     }
   }
 }

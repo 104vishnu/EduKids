@@ -1,9 +1,9 @@
-// // Footer.scss
-
 // .footer {
-//     background-color: green; /* Set your desired background color */
+//     position: sticky;
+//     width: 100%;
+//     background-color: green;
 //     padding: 20px;
-//     color: #fff; /* Set your desired text color */
+//     color: #fff;
 //     font-size: 14px;
 
 //     .footer-content {
@@ -36,7 +36,7 @@
 //         text-align: center;
 //         margin-top: 20px;
 //         padding-top: 10px;
-//         border-top: 1px solid #fff; /* Set your desired border color */
+//         border-top: 1px solid #fff;
 
 //         p {
 //             margin: 0;
@@ -44,8 +44,22 @@
 //     }
 // }
 
+// @media screen and (max-width: 768px) {
+//     .footer {
+//         padding: 10px; // Adjust padding for smaller screens
+//     }
 
-// Footer.scss
+//     .footer-content {
+//         flex-direction: column; // Stack items vertically on smaller screens
+
+//         .footer-left,
+//         .footer-right {
+//             width: 100%; // Make both sections full width on smaller screens
+//             text-align: center; // Center align text on smaller screens
+//             margin-bottom: 15px; // Add some bottom margin between sections
+//         }
+//     }
+// }
 
 .footer {
     position: sticky;
@@ -91,21 +105,34 @@
             margin: 0;
         }
     }
-}
 
-@media screen and (max-width: 768px) {
-    .footer {
-        padding: 10px; // Adjust padding for smaller screens
+    @media screen and (max-width: 768px) {
+        padding: 10px;
+
+        .footer-content {
+            flex-direction: column;
+
+            .footer-left,
+            .footer-right {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
     }
 
-    .footer-content {
-        flex-direction: column; // Stack items vertically on smaller screens
+    @media screen and (max-width: 480px) {
+        .footer {
+            padding: 5px; // Further reduce padding for smaller screens
+        }
 
-        .footer-left,
-        .footer-right {
-            width: 100%; // Make both sections full width on smaller screens
-            text-align: center; // Center align text on smaller screens
-            margin-bottom: 15px; // Add some bottom margin between sections
+        .footer-content {
+            .footer-left,
+            .footer-right {
+                h3 {
+                    font-size: 16px; // Decrease font size for smaller screens
+                }
+            }
         }
     }
 }

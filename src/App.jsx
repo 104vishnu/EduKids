@@ -1,5 +1,5 @@
 
-
+import "./App.scss";
 import React, { useState } from "react";
 import Layout from "./components/layout/Layout.jsx";
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -46,16 +46,18 @@ function App() {
         },
         {
           path: "/home",
-          element:      (<ProtectedRoutes>
+          element:      (
+          // <ProtectedRoutes>
           <Home />
-        </ProtectedRoutes>)
+        // </ProtectedRoutes>`
+      )
         },
         {
           path: "/courses",
           element: (
-            <ProtectedRoutes>
+            // <ProtectedRoutes>
               <Courses />
-            </ProtectedRoutes>
+            // </ProtectedRoutes>
           ),
         },
         
@@ -70,9 +72,10 @@ function App() {
         {
           path: "/activity",
           element: (
-            <ProtectedRoutes>
-              <Activity />
-            </ProtectedRoutes>
+            // <ProtectedRoutes>
+            //   <Activity />
+            // </ProtectedRoutes>
+               <Activity />
           ),
         },
 
@@ -80,17 +83,17 @@ function App() {
         {
           path: "/numbers",
           element: (
-            <ProtectedRoutes>
+            // <ProtectedRoutes>
               <Numbers />
-            </ProtectedRoutes>
+            // </ProtectedRoutes>
           ),
         },
         {
           path: "/tamil",
           element: (
-            <ProtectedRoutes>
+            // <ProtectedRoutes>
               <Tamil />
-            </ProtectedRoutes>
+            // </ProtectedRoutes>
           ),
         },
         {
@@ -112,27 +115,27 @@ function App() {
         {
           path: "/malayalam",
           element: (
-            <ProtectedRoutes>
+            // <ProtectedRoutes>
               <Malayalam />
-            </ProtectedRoutes>
+            // </ProtectedRoutes>
           ),
         },
 
         {
           path: "/count-numbers",
           element: (
-            <ProtectedRoutes>
+            // <ProtectedRoutes>
               <CountNumbers />
-            </ProtectedRoutes>
+            // </ProtectedRoutes>
           ),
         },
 
         {
           path: "/audio-to-number",
           element: (
-            <ProtectedRoutes>
+            // <ProtectedRoutes>
               <AudioToNumbers />
-            </ProtectedRoutes>
+            // </ProtectedRoutes>
           ),
         },
 

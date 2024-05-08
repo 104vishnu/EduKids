@@ -1,14 +1,136 @@
+// .audio-to-numbers {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 5px;
+//   background: #F3D7CE;
+
+//   .question {
+//     margin-bottom: 20px;
+
+//     .play-button {
+//       padding: 10px 20px;
+//       background-color: #8ed8fc;
+//       border: none;
+//       border-radius: 5px;
+//       cursor: pointer;
+//       transition: background-color 0.3s ease;
+
+//       &:hover {
+//         background-color: #6bbbe6;
+//       }
+//     }
+
+//     audio {
+//       margin-top: 20px;
+//       width: 100%;
+//       display: none;
+//     }
+//   }
+
+//   .options {
+//     margin-top: 10px;
+//     display: flex;
+//     justify-content: center;
+   
+
+//     .options-container {
+//       display: flex;
+//       gap: 20px;
+
+//       .first,
+//       .second {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 10px; // Add some gap between options
+//       }
+//     }
+
+//     .option1,
+//     .option2,
+//     .option3,
+//     .option4 {
+//       button {
+//         width: 100px;
+//         height: 50px;
+//         border: none;
+//         background-color: lightpink; // Set default background color
+//         color: #000;
+//         font-size: 16px;
+//         font-weight: bold;
+//         cursor: pointer;
+//         transition: background-color 0.3s ease; // Smooth transition for background color change
+//         margin-bottom: 10px; // Add margin below each button
+
+//         &:disabled {
+//           cursor: not-allowed;
+//         }
+
+//         &.correct {
+//           background-color: green; // Set background color for correct option
+//         }
+
+//         &.wrong {
+//           background-color: tomato; // Set background color for wrong option
+//         }
+//       }
+//     }
+//   }
+
+//   .modal {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background-color: rgba(230, 69, 11, 0.5);
+
+//     .modal-content {
+//       background-color: #fff;
+//       padding: 20px;
+//       border-radius: 10px;
+//       text-align: center;
+
+//       p {
+//         margin-bottom: 10px;
+//       }
+
+//       .options {
+//         display: flex;
+//         justify-content: center;
+//         gap: 20px;
+
+//         .link-button {
+//           padding: 10px 20px;
+//           text-decoration: none;
+//           background-color: rgb(26, 143, 181);
+//           color: #000;
+//           border: none;
+//           border-radius: 5px;
+//           cursor: pointer;
+//           transition: background-color 0.3s ease;
+
+//           &:hover {
+//             background-color: #8ed8fc;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 .audio-to-numbers {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5px;
+  padding: 20px;
   background: #F3D7CE;
+  height:100vh;
 
   .question {
     margin-bottom: 20px;
 
     .play-button {
+      color: #000;
       padding: 10px 20px;
       background-color: #8ed8fc;
       border: none;
