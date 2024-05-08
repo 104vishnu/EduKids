@@ -1,4 +1,6 @@
-// // LearnNumbers.scss
+
+
+// /* LearnNumbers.scss */
 // .learn-numbers {
 //     text-align: center;
   
@@ -13,56 +15,66 @@
 //       gap: 20px;
   
 //       .number-card {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//       }
-  
-//       .number-image {
-//         width: 150px;
-//         height: auto;
 //         cursor: pointer;
 //         transition: transform 0.2s;
+//         width: 20%; /* Each card takes up 20% of the container's width */
   
 //         &:hover {
 //           transform: scale(1.1);
 //         }
 //       }
   
-//       .audio-control {
-//         margin-top: 5px;
+//       .number-image {
+//         width: 100%;
+//         height: auto;
 //       }
 //     }
 //   }
-
-/* LearnNumbers.scss */
+  
 .learn-numbers {
-    text-align: center;
-  
-    h2 {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .numbers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .number-card {
+      cursor: pointer;
+      transition: transform 0.2s;
+      flex: 1 0 20%; /* Each card takes up 20% of the container's width */
+      max-width: 200px; /* Limit the maximum width of each card */
       margin-bottom: 20px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-  
-    .numbers-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-  
-      .number-card {
-        cursor: pointer;
-        transition: transform 0.2s;
-        width: 20%; /* Each card takes up 20% of the container's width */
-  
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-  
-      .number-image {
-        width: 100%;
-        height: auto;
-      }
+
+    .number-image {
+      width: 100%;
+      height: auto;
     }
   }
-  
+}
+
+@media screen and (max-width: 768px) {
+  .numbers-grid {
+    gap: 10px; /* Reduce gap between cards for smaller screens */
+  }
+
+  .number-card {
+    flex-basis: 45%; /* Two cards in a row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .number-card {
+    flex-basis: 100%; /* Single card in a row on even smaller screens */
+  }
+}

@@ -1,50 +1,49 @@
-// Courses.scss
 
 .courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; // Center items vertically
+}
+
+.course {
+  width: 280px;
+  height: 250px;
+  margin: 0 auto 20px auto; // Center the course div horizontally and add margin at the bottom
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
   }
-  
+
+  .course-image {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .course-name {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-container {
+    justify-content: center; // Center items horizontally on smaller screens
+  }
+
   .course {
-    // width: calc(33.33% - 20px); // Three courses in each row with 20px margin on both sides
-    width: 280px;
-    height: 250px; // Fixed height for each course
-    margin-bottom: 20px;
-    padding: 20px; // Adding padding to each course
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border: 1px solid #ccc; // Adding border for better visibility
-    border-radius: 10px; // Rounded corners for the course container
-    overflow: hidden; // Ensure that the image stays within the course div
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Adding shadow for depth
-  
-    &:nth-child(3n) {
-      margin-right: 0; // No margin on the last course of each row
-    }
-  
-    &:hover {
-      transform: scale(1.05); // Scale up the course when hovered
-    }
-  
-    .course-image {
-      width: 100%; // Adjusting image width to fit within course div
-      height: 80%; // Adjusting image height to fit within course div
-      object-fit:contain; // Maintain aspect ratio and crop if necessary
-      border-radius: 10px 10px 0 0; // Rounded corners for the top of the image
-    }
-  
-    .course-name {
-      margin-top: 10px;
-      text-align: center;
-      font-weight: bold;
-      color: #333; // Course name text color
-    }
+    width: calc(50% - 20px);
   }
-  
-  @media (max-width: 768px) {
-    .course {
-      width: calc(50% - 20px); // Two courses in a row on smaller screens with 20px margin on both sides
-    }
-  }
-  
+}

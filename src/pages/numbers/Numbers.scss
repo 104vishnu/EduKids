@@ -1,49 +1,128 @@
-// Numbers.scss
+// // Numbers.scss
 
+// .numbers {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100vw; /* Full width of the viewport */
+//     height: 100vh; /* Full height of the viewport */
+//     overflow: hidden; /* Ensure no overflow content */
+  
+//     h2 {
+//       font-size: 24px;
+//       margin-bottom: 20px;
+//     }
+  
+//     .number-slider {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       flex: 1; /* Fill remaining space */
+//       overflow: hidden; /* Ensure no overflow content */
+  
+//       .number-card {
+//         margin: 0 10px;
+//         cursor: pointer;
+//         transition: transform 0.3s ease;
+  
+//         img {
+//           width: 100%; /* Make the image fill the width of the container */
+//           height: 100%; /* Make the image fill the height of the container */
+//           object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
+//         }
+  
+//         &:hover {
+//           transform: scale(1.1);
+//         }
+//       }
+  
+//       .navigation-buttons {
+//         display: flex;
+//         justify-content: space-between; /* Spacing buttons to the left and right */
+//         width: 100%; /* Make the button container fill the width */
+//         margin-top: 20px;
+//       }
+  
+//       button {
+//         background-color: green;
+//         color: #fff;
+//         border: none;
+//         padding: 10px 20px;
+//         cursor: pointer;
+//         transition: background-color 0.3s ease;
+  
+//         &:hover {
+//           background-color: #0056b3;
+//         }
+//       }
+  
+//       .previous-button {
+//         background-color: #28a745; /* Green background color */
+//         &:hover {
+//           background-color: #218838; /* Darker green on hover */
+//         }
+//       }
+  
+//       .next-button {
+//         background-color: #28a745; /* Green background color */
+//         &:hover {
+//           background-color: #218838; /* Darker green on hover */
+//         }
+//       }
+//     }
+  
+//     .footer {
+//       margin-top: 20px;
+//       color: #666;
+//       font-size: 14px;
+//     }
+//   }
+  
 .numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Ensure no overflow content */
+
+  h2 {
+    font-size: 2rem; /* Increase font size for better readability on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .number-slider {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    align-items: center;
+    flex: 1; /* Fill remaining space */
     overflow: hidden; /* Ensure no overflow content */
-  
-    h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
+    max-width: 100%; /* Ensure slider doesn't exceed viewport width */
+
+    .number-card {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 100%; /* Make the image fill the width of the container */
+        height: auto; /* Auto height to maintain aspect ratio */
+        border-radius: 10px; /* Add border-radius for rounded corners */
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-  
-    .number-slider {
+
+    .navigation-buttons {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1; /* Fill remaining space */
-      overflow: hidden; /* Ensure no overflow content */
-  
-      .number-card {
-        margin: 0 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-  
-        img {
-          width: 100%; /* Make the image fill the width of the container */
-          height: 100%; /* Make the image fill the height of the container */
-          object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
-        }
-  
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-  
-      .navigation-buttons {
-        display: flex;
-        justify-content: space-between; /* Spacing buttons to the left and right */
-        width: 100%; /* Make the button container fill the width */
-        margin-top: 20px;
-      }
-  
+      justify-content: space-between; /* Spacing buttons to the left and right */
+      width: 100%; /* Make the button container fill the width */
+      margin-top: 20px;
+
       button {
         background-color: green;
         color: #fff;
@@ -51,19 +130,19 @@
         padding: 10px 20px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-  
+
         &:hover {
           background-color: #0056b3;
         }
       }
-  
+
       .previous-button {
         background-color: #28a745; /* Green background color */
         &:hover {
           background-color: #218838; /* Darker green on hover */
         }
       }
-  
+
       .next-button {
         background-color: #28a745; /* Green background color */
         &:hover {
@@ -71,11 +150,34 @@
         }
       }
     }
-  
-    .footer {
-      margin-top: 20px;
-      color: #666;
-      font-size: 14px;
-    }
   }
-  
+
+  .footer {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .numbers h2 {
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .number-slider {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center cards vertically */
+  }
+
+  .number-card {
+    margin: 10px 0; /* Add margin to separate cards vertically */
+  }
+
+  .navigation-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 10px; /* Reduce margin between slider and buttons */
+  }
+}

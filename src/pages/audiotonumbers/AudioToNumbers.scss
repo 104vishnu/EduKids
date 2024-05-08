@@ -1,14 +1,17 @@
+
 // .audio-to-numbers {
 //   display: flex;
 //   flex-direction: column;
 //   align-items: center;
-//   margin-top: 5px;
+//   padding: 20px;
 //   background: #F3D7CE;
+//   height:100vh;
 
 //   .question {
 //     margin-bottom: 20px;
 
 //     .play-button {
+//       color: #000;
 //       padding: 10px 20px;
 //       background-color: #8ed8fc;
 //       border: none;
@@ -118,15 +121,22 @@
 //     }
 //   }
 // }
+
 .audio-to-numbers {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center content vertically */
+
   padding: 20px;
   background: #F3D7CE;
-  height:100vh;
+  height: 100vh;
 
   .question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
     margin-bottom: 20px;
 
     .play-button {
@@ -154,10 +164,11 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
-   
 
     .options-container {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
 
       .first,
@@ -165,7 +176,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; // Add some gap between options
+        gap: 10px;
       }
     }
 
@@ -177,24 +188,24 @@
         width: 100px;
         height: 50px;
         border: none;
-        background-color: lightpink; // Set default background color
+        background-color: lightpink;
         color: #000;
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
-        transition: background-color 0.3s ease; // Smooth transition for background color change
-        margin-bottom: 10px; // Add margin below each button
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
 
         &:disabled {
           cursor: not-allowed;
         }
 
         &.correct {
-          background-color: green; // Set background color for correct option
+          background-color: green;
         }
 
         &.wrong {
-          background-color: tomato; // Set background color for wrong option
+          background-color: tomato;
         }
       }
     }
@@ -237,6 +248,41 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .audio-to-numbers .options-container {
+    gap: 10px;
+  }
+
+  .audio-to-numbers .option1,
+  .audio-to-numbers .option2,
+  .audio-to-numbers .option3,
+  .audio-to-numbers .option4 {
+    button {
+      width: 80px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .audio-to-numbers .question .play-button {
+    margin-bottom: 10px;
+  }
+
+  .audio-to-numbers .question audio {
+    margin-top: 10px;
+  }
+  
+  .audio-to-numbers .options-container {
+    .first,
+    .second {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

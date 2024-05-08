@@ -9,7 +9,7 @@ const Tamil = () => {
   };
 
   const renderTamilDigits = () => {
-    const tamilDigits = ['௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯', '௰'];
+    const tamilDigits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     return tamilDigits.map((number, index) => (
       <div key={index} className="tamil-digit" onClick={() => handleNumberClick(index + 1)}>
         {number}

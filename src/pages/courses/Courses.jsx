@@ -1,36 +1,4 @@
-// import { useNavigate } from "react-router-dom";
-// import './Courses.scss';
 
-// function Courses() {
-//   const navigate = useNavigate();
-
-//   const handleCourseClick = (course) => {
-//     // Redirect to the corresponding course page
-//     navigate(`/${course}`);
-//   };
-
-//   return (
-//     <div>
-//       <div onClick={() => handleCourseClick("english")}>
-//         <img src="./img/learnenglish.png" alt="English Course" />
-//       </div>
-//       <div onClick={() => handleCourseClick("hindi")}>
-//         <img src="./img/learnhindi.png" alt="Hindi Course" />
-//       </div>
-//       <div onClick={() => handleCourseClick("tamil")}>
-//         <img src="./img/learntamil.png" alt="Tamil Course" />
-//       </div>
-//       <div onClick={() => handleCourseClick("malayalam")}>
-//         <img src="./img/learnmalayalam.png" alt="Malayalam Course" />
-//       </div>
-//       <div onClick={() => handleCourseClick("telugu")}>
-//         <img src="./img/learntelugu.png" alt="Telugu Course" />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Courses;
 import { useNavigate } from "react-router-dom";
 import './Courses.scss';
 

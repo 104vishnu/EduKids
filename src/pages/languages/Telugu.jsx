@@ -9,7 +9,7 @@ const Telugu = () => {
   };
 
   const renderTeluguDigits = () => {
-    const teluguDigits = ['౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯', '౧౦'];
+    const teluguDigits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     return teluguDigits.map((digit, index) => (
       <div key={index} className="telugu-digit" onClick={() => handleNumberClick(index + 1)}>
         {digit}

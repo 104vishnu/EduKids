@@ -1,3 +1,93 @@
+// .login {
+//     width: 100%;
+//     height: 100vh;
+//     background-image: url('./img/d.png');
+//     background-size: cover;
+//     background-position: center;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+
+//     .loginA {
+//         text-align: center;
+
+//         img {
+//             margin-bottom: 20px;
+//         }
+
+//         h1 {
+//             color: #333;
+//             margin-bottom: 20px;
+//             font-size: 24px; /* Adjust font size as needed */
+//         }
+//     }
+
+//     .loginB {
+//         text-align: center;
+
+//         form {
+//             label {
+//                 display: block;
+//                 margin-bottom: 5px;
+//             }
+
+//             input {
+//                 width: 100%;
+//                 padding: 10px;
+//                 margin-bottom: 10px;
+//                 border: 1px solid #ccc;
+//                 border-radius: 5px;
+//                 font-size: 16px;
+
+//                 &:focus {
+//                     outline: none;
+//                     border-color: #007bff;
+//                     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+//                 }
+//             }
+
+//             button {
+//                 width: 50%;
+//                 padding: 10px;
+//                 border: none;
+//                 border-radius: 5px;
+//                 background-color: #007bff;
+//                 color: #fff;
+//                 font-size: 16px;
+//                 cursor: pointer;
+
+//                 &:hover {
+//                     background-color: #0056b3;
+//                 }
+//             }
+//         }
+
+//         p {
+//             margin-top: 20px;
+
+//             span {
+//                 color: blue;
+//                 cursor: pointer;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 768px) {
+//     .login {
+//         padding: 20px; // Adjust padding for smaller screens
+//     }
+
+//     .loginB {
+//         width: 80%; // Adjust form width for smaller screens
+
+//         button {
+//             width: 100%; // Make the button full width for smaller screens
+//         }
+//     }
+// }
+
 .login {
     width: 100%;
     height: 100vh;
@@ -8,82 +98,100 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    padding: 20px;
+  
     .loginA {
-        text-align: center;
-
-        img {
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 24px; /* Adjust font size as needed */
-        }
+      text-align: center;
+      margin-bottom: 20px;
+  
+      img {
+        max-width: 80%;
+        height: auto;
+      }
+  
+      h1 {
+        color: #333;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
     }
-
+  
     .loginB {
-        text-align: center;
-
-        form {
-            label {
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            input {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-size: 16px;
-
-                &:focus {
-                    outline: none;
-                    border-color: #007bff;
-                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-                }
-            }
-
-            button {
-                width: 50%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background-color: #007bff;
-                color: #fff;
-                font-size: 16px;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #0056b3;
-                }
-            }
+      text-align: center;
+      width: 100%;
+  
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
         }
-
-        p {
-            margin-top: 20px;
-
-            span {
-                color: blue;
-                cursor: pointer;
-            }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+  
+          &:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          }
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .login {
-        padding: 20px; // Adjust padding for smaller screens
-    }
-
-    .loginB {
-        width: 80%; // Adjust form width for smaller screens
-
+  
         button {
-            width: 100%; // Make the button full width for smaller screens
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background-color: #007bff;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
         }
+      }
+  
+      p {
+        margin-top: 20px;
+  
+        span {
+          color: blue;
+          cursor: pointer;
+        }
+      }
     }
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .login {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .login {
+      padding: 0;
+    }
+  
+    .loginA {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  
+    .loginB {
+      form {
+        max-width: 90%;
+      }
+    }
+  }
+  

@@ -112,6 +112,7 @@
     @media screen and (max-width: 768px) {
         flex-direction: column;
         padding: 10px;
+       
 
         .logo {
             margin-bottom: 10px;
@@ -119,8 +120,10 @@
 
         .nav-links {
             justify-content: center;
+            gap: 10px;
 
             li {
+                
                 margin: 5px 0;
             }
         }
@@ -142,6 +145,7 @@
         }
 
         .nav-links {
+            gap: 10px;
             li {
                 margin-right: 10px;
 

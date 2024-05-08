@@ -1,6 +1,76 @@
-.register {
+// .register {
    
-    width:100%;
+//     width:100%;
+//     height: 100vh;
+//     background-image: url('./img/c.png');
+//     background-size: cover;
+//     background-position: center;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     .registerhead {
+//         text-align: center;
+
+//         .heading {
+//             color: #333;
+//             margin-bottom: 20px;
+//         }
+
+//         form {
+//             label {
+//                 display: block;
+//                 margin-bottom: 5px;
+//             }
+
+//             input {
+//                 width: 100%;
+//                 padding: 10px;
+//                 margin-bottom: 10px;
+//                 border: 1px solid #ccc;
+//                 border-radius: 5px;
+//                 font-size: 16px;
+
+//                 &:focus {
+//                     outline: none;
+//                     border-color: #007bff;
+//                     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+//                 }
+//             }
+
+//             button {
+//                 width: 50%;
+//                 padding: 10px;
+//                 border: none;
+//                 border-radius: 5px;
+//                 background-color: #007bff;
+//                 color: #fff;
+//                 font-size: 16px;
+//                 cursor: pointer;
+
+//                 &:hover {
+//                     background-color: #0056b3;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 768px) {
+//     .register {
+//         padding: 20px; // Adjust padding for smaller screens
+//     }
+
+//     .registerhead {
+//         width: 80%; // Adjust form width for smaller screens
+
+//         button {
+//             width: 100%; // Make the button full width for smaller screens
+//         }
+//     }
+// }
+.register {
+    width: 100%;
     height: 100vh;
     background-image: url('./img/c.png');
     background-size: cover;
@@ -8,64 +78,70 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 20px; // Add padding for better spacing
+    
     .registerhead {
-        text-align: center;
-
-        .heading {
-            color: #333;
-            margin-bottom: 20px;
+      text-align: center;
+      max-width: 500px; // Limit the max-width of the content for better readability
+      
+      .heading {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 2rem; // Increase font size for better readability on smaller screens
+      }
+  
+      form {
+        label {
+          display: block;
+          margin-bottom: 5px;
         }
-
-        form {
-            label {
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            input {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-size: 16px;
-
-                &:focus {
-                    outline: none;
-                    border-color: #007bff;
-                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-                }
-            }
-
-            button {
-                width: 50%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background-color: #007bff;
-                color: #fff;
-                font-size: 16px;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #0056b3;
-                }
-            }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+  
+          &:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          }
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .register {
-        padding: 20px; // Adjust padding for smaller screens
-    }
-
-    .registerhead {
-        width: 80%; // Adjust form width for smaller screens
-
+  
         button {
-            width: 100%; // Make the button full width for smaller screens
+          width: 100%; // Make the button full width
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background-color: #007bff;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
         }
+      }
     }
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .register {
+      padding: 10px; // Adjust padding for smaller screens
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .register {
+      background-size: contain; // Ensure the background image remains responsive on smaller screens
+    }
+  
+    .registerhead {
+      max-width: 90%; // Adjust the maximum width of the content for smaller screens
+    }
+  }
+  
