@@ -14,22 +14,24 @@ function Home() {
           <h2>Welcome to EduKids!</h2>
           <p>Empowering young minds through education.</p>
         </section>
+        <div className='box'>
         <section className="features">
           <Link to='/courses'>
           <div className="feature">
-            <img src="./img/kidszone.png" alt="Courses" />
+            <img src="./img/kidslearn.gif" alt="Courses" />
             <h3>Engaging Courses</h3>
             <p>Explore our interactive and educational courses for children.</p>
           </div>
           </Link>
           <Link to='/activity'>
           <div className="feature">
-            <img src="./img/activity.png" alt="Activities" />
+            <img src="./img/activity2.gif" alt="Activities" />
             <h3>Fun Activities</h3>
             <p>Discover exciting activities designed to foster creativity and learning.</p>
           </div>
           </Link>
         </section>
+        </div>
       </div>
     </main>
   );

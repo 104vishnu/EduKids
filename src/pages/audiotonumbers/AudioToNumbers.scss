@@ -1,155 +1,33 @@
-
-// .audio-to-numbers {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 20px;
-//   background: #F3D7CE;
-//   height:100vh;
-
-//   .question {
-//     margin-bottom: 20px;
-
-//     .play-button {
-//       color: #000;
-//       padding: 10px 20px;
-//       background-color: #8ed8fc;
-//       border: none;
-//       border-radius: 5px;
-//       cursor: pointer;
-//       transition: background-color 0.3s ease;
-
-//       &:hover {
-//         background-color: #6bbbe6;
-//       }
-//     }
-
-//     audio {
-//       margin-top: 20px;
-//       width: 100%;
-//       display: none;
-//     }
-//   }
-
-//   .options {
-//     margin-top: 10px;
-//     display: flex;
-//     justify-content: center;
-   
-
-//     .options-container {
-//       display: flex;
-//       gap: 20px;
-
-//       .first,
-//       .second {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         gap: 10px; // Add some gap between options
-//       }
-//     }
-
-//     .option1,
-//     .option2,
-//     .option3,
-//     .option4 {
-//       button {
-//         width: 100px;
-//         height: 50px;
-//         border: none;
-//         background-color: lightpink; // Set default background color
-//         color: #000;
-//         font-size: 16px;
-//         font-weight: bold;
-//         cursor: pointer;
-//         transition: background-color 0.3s ease; // Smooth transition for background color change
-//         margin-bottom: 10px; // Add margin below each button
-
-//         &:disabled {
-//           cursor: not-allowed;
-//         }
-
-//         &.correct {
-//           background-color: green; // Set background color for correct option
-//         }
-
-//         &.wrong {
-//           background-color: tomato; // Set background color for wrong option
-//         }
-//       }
-//     }
-//   }
-
-//   .modal {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-//     background-color: rgba(230, 69, 11, 0.5);
-
-//     .modal-content {
-//       background-color: #fff;
-//       padding: 20px;
-//       border-radius: 10px;
-//       text-align: center;
-
-//       p {
-//         margin-bottom: 10px;
-//       }
-
-//       .options {
-//         display: flex;
-//         justify-content: center;
-//         gap: 20px;
-
-//         .link-button {
-//           padding: 10px 20px;
-//           text-decoration: none;
-//           background-color: rgb(26, 143, 181);
-//           color: #000;
-//           border: none;
-//           border-radius: 5px;
-//           cursor: pointer;
-//           transition: background-color 0.3s ease;
-
-//           &:hover {
-//             background-color: #8ed8fc;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+// Define colors as variables for easy management
+$light-pink: #F3D7CE; // Light pink background color
+$light-blue: #8ed8fc; // Light blue background color
+$primary-color: #007bff; // Default primary color
+$success-color: #28a745; // Success color for correct option
+$error-color: #dc3545; // Error color for wrong option
 
 .audio-to-numbers {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
-
   padding: 20px;
-  background: #F3D7CE;
-  height: 100vh;
+  background: $light-pink;
+  min-height: 100vh; // Ensure component takes full height of viewport
 
   .question {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Center content horizontally */
     margin-bottom: 20px;
+    background-color: $light-blue;
 
     .play-button {
       color: #000;
       padding: 10px 20px;
-      background-color: #8ed8fc;
+      background-color: $light-blue;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #6bbbe6;
+        background-color: darken($light-blue, 10%);
       }
     }
 
@@ -164,6 +42,7 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    align-items: center; // Center options vertically
 
     .options-container {
       display: flex;
@@ -215,7 +94,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: rgba(230, 69, 11, 0.5);
 
     .modal-content {
@@ -249,6 +132,10 @@
         }
       }
     }
+  }
+
+  .footer {
+    margin-top: auto; // Ensure the footer stays at the bottom
   }
 }
 

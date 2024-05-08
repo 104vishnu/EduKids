@@ -20,7 +20,7 @@ function Activity() {
 
           <Link to='/audio-to-number'>
             <div className="activity">
-              <img src="./img/audiotonumbers.gif" alt="Audio to Number" />
+              <img src="./img/audiotonumbers2.gif" alt="Audio to Number" />
               <h3>Audio to Number</h3>
               <p>Listen to audio clips and identify the corresponding numbers.</p>
             </div>

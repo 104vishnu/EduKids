@@ -47,34 +47,34 @@ function App() {
         {
           path: "/home",
           element:      (
-          <ProtectedRoutes>
+          
           <Home />
-        </ProtectedRoutes>
+      
       )
         },
         {
           path: "/courses",
           element: (
-            <ProtectedRoutes>
+          
               <Courses />
-             </ProtectedRoutes>
+            
           ),
         },
         
         {
           path: "/english",
           element: (
-            <ProtectedRoutes>
+            
               <LearnNumbers />
-             </ProtectedRoutes>
+             
           ),
         },
         {
           path: "/activity",
           element: (
-            <ProtectedRoutes>
+          
                <Activity />
-             </ProtectedRoutes>
+           
               
           ),
         },
@@ -83,33 +83,33 @@ function App() {
         {
           path: "/numbers",
           element: (
-            <ProtectedRoutes>
+        
               <Numbers />
-            </ProtectedRoutes>
+           
           ),
         },
         {
           path: "/tamil",
           element: (
-            <ProtectedRoutes>
+            
               <Tamil />
-             </ProtectedRoutes>
+          
           ),
         },
         {
           path: "/hindi",
           element: (
-            <ProtectedRoutes>
+            
               <Hindi />
-            </ProtectedRoutes>
+          
           ),
         },
         {
           path: "/telugu",
           element: (
-            <ProtectedRoutes>
+            
               <Telugu />
-             </ProtectedRoutes>
+            
           ),
         },
         {
@@ -124,27 +124,27 @@ function App() {
         {
           path: "/count-numbers",
           element: (
-             <ProtectedRoutes>
+             
               <CountNumbers />
-             </ProtectedRoutes>
+             
           ),
         },
 
         {
           path: "/audio-to-number",
           element: (
-            <ProtectedRoutes>
+          
               <AudioToNumbers />
-             </ProtectedRoutes>
+            
           ),
         },
 
         {
           path: "/addition",
           element: (
-            <ProtectedRoutes>
+          
                <Addition />
-            </ProtectedRoutes>
+          
              
            
           ),
@@ -154,9 +154,9 @@ function App() {
           path: "/subtraction",
           element: (
 
-            <ProtectedRoutes>
+         
               <Subtraction />
-            </ProtectedRoutes>
+
              
               
            

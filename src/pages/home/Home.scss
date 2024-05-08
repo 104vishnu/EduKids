@@ -1,5 +1,84 @@
+// .main {
+//   padding: 40px 0;
+// }
 
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
 
+// .hero {
+//   text-align: center;
+//   margin-bottom: 40px;
+
+//   h2 {
+//     font-size: 2.5rem;
+//     margin-bottom: 10px;
+//   }
+
+//   p {
+//     font-size: 1.2rem;
+//     color: #555;
+//   }
+// }
+
+// .box {
+//   display: flex;
+//   flex-direction: row; /* Flex direction row by default */
+//   justify-content: center;
+// }
+
+// .features {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   gap: 20px; /* Proper gap between features */
+// }
+
+// .feature {
+//   flex: 1 1 300px; /* Allow shrinking but not growing, set initial width to 300px */
+//   text-align: center;
+//   padding: 20px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   max-width: 100%; /* Take full width */
+//   height: auto; /* Let the height adjust based on content */
+
+//   img {
+//     width: 100vw; /* Make the image responsive within its container */
+//     height: 100vh; /* Set a maximum height for the image */
+//     object-fit: cover; /* Ensure the image covers the container */
+//     border-radius: 5px;
+//   }
+
+//   h3 {
+//     margin-top: 0px;
+//     font-size: 1.5rem;
+//   }
+
+//   p {
+//     color: #555;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .box {
+//     flex-direction: column; /* Flex direction column for small screens */
+//     align-items: center; /* Center align items */
+//   }
+
+//   .feature {
+//     flex-basis: calc(50% - 20px); /* Two features per row with a gap of 20px */
+//     margin-bottom: 20px; /* Add bottom margin between features */
+//   }
+// }
+
+// @media screen and (max-width: 480px) {
+//   .feature {
+//     flex-basis: calc(100% - 20px); /* Adjust width for smaller screens */
+//   }
+// }
 .main {
   padding: 40px 0;
 }
@@ -25,46 +104,59 @@
   }
 }
 
+.box {
+  display: flex;
+  flex-direction: row; /* Flex direction row by default */
+  justify-content: center;
+}
+
 .features {
   display: flex;
-  flex-wrap: wrap; // Allow features to wrap on smaller screens
-  justify-content: center; // Center features horizontally
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Proper gap between features */
+}
 
-  .feature {
-    flex: 1 1 300px; // Allow shrinking but not growing, set initial width to 300px
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
+.feature {
+  flex: 1 1 300px; /* Allow shrinking but not growing, set initial width to 300px */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 100%; /* Take full width */
+  height: auto; /* Let the height adjust based on content */
+
+  img {
+    width: 100%; /* Make the image responsive within its container */
+    max-height: 200px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensure the image covers the container */
     border-radius: 5px;
-    margin: 0 10px;
-    margin-bottom: 20px; // Add bottom margin between features
-    max-width: 100%; // Ensure features take full width on small screens
+  }
 
-    img {
-      width: 100%; // Make the image responsive within its container
-      max-height: 50%;
-      border-radius: 5px;
-    }
+  h3 {
+    margin-top: 0px;
+    font-size: 1.5rem;
+  }
 
-    h3 {
-      margin-top: 0px;
-      font-size: 1.5rem;
-    }
-
-    p {
-      color: #555;
-    }
+  p {
+    color: #555;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .box {
+    flex-direction: column; /* Flex direction column for small screens */
+    align-items: center; /* Center align items */
+  }
+
   .feature {
-    flex-basis: calc(50% - 20px); // Adjust width for smaller screens
+    flex-basis: calc(50% - 20px); /* Two features per row with a gap of 20px */
+    margin-bottom: 20px; /* Add bottom margin between features */
   }
 }
 
 @media screen and (max-width: 480px) {
   .feature {
-    flex-basis: calc(100% - 20px); // Adjust width for even smaller screens
+    flex-basis: calc(100% - 20px); /* Adjust width for smaller screens */
   }
 }

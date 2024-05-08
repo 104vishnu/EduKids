@@ -1,102 +1,234 @@
 
+// .subtraction {
+//   background-color: #c0c0ff; /* Light purple background color */
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   min-height: calc(100vh - 120px); /* Adjust based on the footer height */
+//   padding: 20px;
+
+//   .question {
+//     margin-bottom: 20px;
+//     text-align: center;
+//   background-color: #c0c0ff; /* Light purple background color */
+
+
+//     p {
+//       font-size: 24px; /* Font size for the question */
+//     }
+//   }
+
+//   .options {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     gap: 20px; /* Proper gap between options */
+
+//     .option {
+//       margin: 5px;
+//       flex: 1 0 120px; /* Each option has a minimum width of 120px */
+//     }
+
+//     button {
+//       width: 100%;
+//       padding: 10px 20px;
+//       font-size: 18px;
+//       border-radius: 5px;
+//       cursor: pointer;
+
+//       &.correct {
+//         background-color: #4caf50;
+//         color: #fff;
+//       }
+
+//       &.wrong {
+//         background-color: #f44336;
+//         color: #fff;
+//       }
+
+//       &:disabled {
+//         cursor: not-allowed;
+//       }
+//     }
+//   }
+
+//   .modal {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100%;
+//     width: 100%;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     background-color: rgba(23, 211, 55, 0.5);
+//     z-index: 100;
+
+//     .modal-content {
+//       background-color: #fff;
+//       padding: 20px;
+//       border-radius: 10px;
+//       text-align: center;
+
+//       .options {
+//         margin-top: 20px;
+
+//         .link-button {
+//           margin: 0 10px;
+//           padding: 10px 20px;
+//           font-size: 16px;
+//           border-radius: 5px;
+//           cursor: pointer;
+//           text-decoration: none;
+//           color: #fff;
+
+//           &.start-again {
+//             background-color: #4caf50;
+//           }
+
+//           &.end {
+//             background-color: #148f06;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   @media screen and (max-width: 768px) {
+//     .options .option {
+//       flex-basis: calc(50% - 10px); /* Two options per row with a gap of 10px */
+//     }
+//   }
+// }
+// Define colors as variables for easy management
+$primary-color: #007bff; // Default primary color
+$success-color: #4caf50; // Success color for correct option
+$error-color: #f44336; // Error color for wrong option
+$light-purple: #c0c0ff; // Light purple background color
+$white: #fff; // White background color
+
 .subtraction {
-  background-color: #c0c0ff; /* Light purple background color */
+  background-color: $light-purple;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 120px); /* Adjust based on the footer height */
-  padding: 20px;
+  flex-grow: 1; /* Grow to fill available space */
+  padding: 20px; /* Add padding */
+}
 
-  .question {
-    margin-bottom: 20px;
+.question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: $white; /* Set background color */
+  border-radius: 10px; /* Add border radius */
+  padding: 20px; /* Add padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Proper gap between options */
+}
+
+.option {
+  text-align: center;
+  margin: 5px;
+  flex: 1 0 120px; /* Each option has a minimum width of 120px */
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $primary-color; /* Default background color */
+  color: $white; /* Default text color */
+  transition: background-color 0.3s ease;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.correct {
+    background-color: $success-color; /* Green background color for correct option */
+  }
+
+  &.wrong {
+    background-color: $error-color; /* Red background color for wrong option */
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(23, 211, 55, 0.5); /* Modal overlay color */
+  z-index: 100;
+
+  .modal-content {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-  background-color: #c0c0ff; /* Light purple background color */
 
+    .options {
+      margin-top: 20px;
 
-    p {
-      font-size: 24px; /* Font size for the question */
-    }
-  }
+      .link-button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: $white; /* Default text color for link buttons */
 
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Proper gap between options */
+        &.start-again {
+          background-color: $primary-color; /* Default background color for start again button */
+        }
 
-    .option {
-      margin: 5px;
-      flex: 1 0 120px; /* Each option has a minimum width of 120px */
-    }
-
-    button {
-      width: 100%;
-      padding: 10px 20px;
-      font-size: 18px;
-      border-radius: 5px;
-      cursor: pointer;
-
-      &.correct {
-        background-color: #4caf50;
-        color: #fff;
-      }
-
-      &.wrong {
-        background-color: #f44336;
-        color: #fff;
-      }
-
-      &:disabled {
-        cursor: not-allowed;
-      }
-    }
-  }
-
-  .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(23, 211, 55, 0.5);
-    z-index: 100;
-
-    .modal-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-
-      .options {
-        margin-top: 20px;
-
-        .link-button {
-          margin: 0 10px;
-          padding: 10px 20px;
-          font-size: 16px;
-          border-radius: 5px;
-          cursor: pointer;
-          text-decoration: none;
-          color: #fff;
-
-          &.start-again {
-            background-color: #4caf50;
-          }
-
-          &.end {
-            background-color: #148f06;
-          }
+        &.end {
+          background-color: darken($primary-color, 10%); /* Darken primary color for end button */
         }
       }
     }
   }
+}
 
-  @media screen and (max-width: 768px) {
-    .options .option {
-      flex-basis: calc(50% - 10px); /* Two options per row with a gap of 10px */
-    }
+.footer {
+  margin-top: auto; /* Ensure the footer stays at the bottom */
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: 768px) {
+  .question {
+    font-size: 20px; /* Decrease font size for smaller screens */
+  }
+
+  button {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .question {
+    font-size: 18px; /* Further decrease font size for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  button {
+    font-size: 14px; /* Further decrease font size for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
   }
 }
