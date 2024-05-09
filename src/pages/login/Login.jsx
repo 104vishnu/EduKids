@@ -27,7 +27,8 @@ function Login() {
   };
 
   return (
-    <div className="login">
+    <div className="login" style={{backgroundImage: "url('./img/d.png')"}}>
+    
       <div className="loginA">
         <img src="images/nittlogo.png" alt="" />
         <h1>Login</h1>
