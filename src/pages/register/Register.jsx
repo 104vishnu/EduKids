@@ -246,7 +246,9 @@ function Register() {
   };
 
   return (
-    <div className="register">
+    <div className="register" style={{backgroundImage: "url('./img/c.png')"}}>
+  
+
       <div className="registerhead">
         <h1 className="heading">Register for Learn</h1>
         <form onSubmit={handleSubmit}>
